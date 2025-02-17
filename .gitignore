@@ -1,4 +1,4 @@
-#ignore unnecessary Unity files
+# Ignore unnecessary Unity files
 
 Library/
 Temp/
@@ -8,4 +8,4 @@ Build/
 Builds/
 UserSettings/
 .vs/
-.vscode/Library/
+.vscode/
