@@ -711,11 +711,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 828e25b3-d021-48d6-9aab-3226f70ea993
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: iridium_21p_web_game-csu
+  organizationId: angelo-figueroa
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
