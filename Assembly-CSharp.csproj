@@ -55,6 +55,9 @@
     <UnityVersion>2021.3.45f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Scripts\Mechanics\PlayAudioClip.cs" />
     <Compile Include="Assets\Scripts\Gameplay\PlayerTokenCollision.cs" />
     <Compile Include="Assets\Scripts\Gameplay\PlayerLanded.cs" />
@@ -72,6 +75,8 @@
     <Compile Include="Assets\Scripts\Mechanics\EnemyController.cs" />
     <Compile Include="Assets\Scripts\View\AnimatedTile.cs" />
     <Compile Include="Assets\Scripts\Mechanics\TokenInstance.cs" />
+    <Compile Include="Assets\IntroManager.cs" />
+    <Compile Include="Assets\Scripts\Mechanics\Sample.cs" />
     <Compile Include="Assets\Scripts\Mechanics\TokenController.cs" />
     <Compile Include="Assets\Scripts\Gameplay\PlayerEnteredVictoryZone.cs" />
     <Compile Include="Assets\Scripts\Mechanics\PatrolPath.cs" />
@@ -80,6 +85,7 @@
     <Compile Include="Assets\Scripts\Gameplay\PlayerSpawn.cs" />
     <Compile Include="Assets\Scripts\UI\MainUIController.cs" />
     <Compile Include="Assets\Scripts\Mechanics\AnimationController.cs" />
+    <Compile Include="Assets\SceneLoadsLevel.cs" />
     <Compile Include="Assets\Mod Assets\Mod Resources\Scripts\Platformer\PlatformerSpeedPad.cs" />
     <Compile Include="Assets\Scripts\Core\Simulation.Event.cs" />
     <Compile Include="Assets\Scripts\Core\Fuzzy.cs" />
@@ -98,8 +104,6 @@
     <Compile Include="Assets\Mod Assets\Mod Resources\Scripts\Platformer\SimpleTrigger.cs" />
     <Compile Include="Assets\Scripts\Mechanics\DeathZone.cs" />
     <Compile Include="Assets\Scripts\Gameplay\PlayerJumped.cs" />
-    <Compile Include="Assets\IntroManager.cs" />
-    <Compile Include="Assets\SceneLoadsLevel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

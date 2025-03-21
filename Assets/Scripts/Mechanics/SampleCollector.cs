@@ -1,19 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
-// SampleCollector.cs
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SampleCollector : MonoBehaviour
 {
-    public int collectedSamples = 0;
+    private int totalSamples;
+    private int collectedSamples;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void Start()
     {
-        if (other.CompareTag("Sample"))
+        totalSamples = GameObject.FindGameObjectsWithTag("Sample").Length;
+        collectedSamples = 0;
+    }
+
+    public void CollectSample()
+    {
+        collectedSamples++;
+        if (collectedSamples >= totalSamples)
         {
-            collectedSamples++;
-            Destroy(other.gameObject);
-            Debug.Log("Collected Samples: " + collectedSamples);
+            LoadNextLevel();
+        }
+    }
+
+    void LoadNextLevel()
+    {
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        if (currentSceneIndex + 1 < SceneManager.sceneCountInBuildSettings)
+        {
+            SceneManager.LoadScene(currentSceneIndex + 1);
         }
     }
 }
+
