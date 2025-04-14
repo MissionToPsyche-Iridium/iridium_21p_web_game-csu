@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Introduction.unity
     guid: d9117ce3912b0c7499391b7cfd5ba0f6
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/MainMenu.unity
     guid: 03e5cc6c9d7d6844e96d2dbf876fb36d
   - enabled: 1
     path: Assets/Level A.unity
@@ -25,8 +25,11 @@ EditorBuildSettings:
     guid: 3eaa1945b58634f748c8a0ab2ec9474b
   - enabled: 1
     path: Assets/Level C.unity
-    guid: 9004d6ed7f26aae4186a4547df4cd94e
+    guid: a625c10c4336aa044a8969f0458818c3
   - enabled: 1
     path: Assets/Level D.unity
     guid: f66afd3de0c8eb048a56712b5da4d01b
+  - enabled: 1
+    path: Assets/Level E.unity
+    guid: c4e3cff7393814c5aa21b00cec4b6ef8
   m_configObjects: {}
