@@ -1,59 +1,50 @@
 using UnityEngine;
+using TMPro; // Critical for Level A's TextMeshPro
 using UnityEngine.SceneManagement;
 
 public class SampleCollectorForLevelF : MonoBehaviour
 {
-    [Header("Settings")]
-    [Tooltip("Manually set this to your visible sample count")]
-    public int expectedSamples = 5; // Set this to 5 in Inspector
+    [Header("UI Reference")]
+    public TMPro.TextMeshProUGUI sampleCounterText; // Must use TextMeshProUGUI
 
+    [Header("Level F Settings")]
+    public int totalSamples = 5; // Set to your metal count
     private int collectedSamples;
 
     void Start()
     {
-        // Double-check for accidental hidden samples
-        CleanUpHiddenSamples();
-
-        Debug.Log($"Expecting to collect: {expectedSamples} samples");
+        // Initialize UI to "0/5"
+        UpdateUI();
+        Debug.Log("[Level F] Ready! Samples to collect: " + totalSamples);
     }
 
-    // Call this from your SampleF script
     public void CollectSample()
     {
         collectedSamples++;
-        Debug.Log($"Collected: {collectedSamples}/{expectedSamples}");
+        UpdateUI();
+        Debug.Log($"[Level F] Collected: {collectedSamples}/{totalSamples}");
 
-        if (collectedSamples >= expectedSamples)
+        if (collectedSamples >= totalSamples)
         {
-            Debug.Log("All collected! Loading MainMenu...");
-            LoadMainMenu();
+            Debug.Log("[Level F] Loading MainMenu...");
+            SceneManager.LoadScene("MainMenu"); // Your custom transition
         }
     }
 
-    void LoadMainMenu()
+    void UpdateUI()
     {
-        string sceneName = "MainMenu";
-        if (Application.CanStreamedLevelBeLoaded(sceneName))
-        {
-            SceneManager.LoadScene(sceneName);
-        }
+        if (sampleCounterText != null)
+            sampleCounterText.text = $"Samples: {collectedSamples}/{totalSamples}";
         else
-        {
-            Debug.LogError($"Missing scene: {sceneName}. Add it via File > Build Settings!");
-        }
+            Debug.LogWarning("[Level F] UI Text not assigned!");
     }
 
-    // Nuclear option to delete hidden samples
-    void CleanUpHiddenSamples()
+    // Editor validation
+#if UNITY_EDITOR
+    void OnValidate()
     {
-        GameObject[] allSamples = GameObject.FindGameObjectsWithTag("Sample");
-        foreach (GameObject sample in allSamples)
-        {
-            if (!sample.activeInHierarchy || sample.GetComponent<Collider2D>() == null)
-            {
-                Debug.LogWarning($"Destroying hidden sample: {sample.name}");
-                Destroy(sample);
-            }
-        }
+        if (sampleCounterText == null)
+            Debug.LogError("Assign Level A's SampleCounterText!", this);
     }
+#endif
 }
