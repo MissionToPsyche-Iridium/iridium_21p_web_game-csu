@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\Gameplay\PlayerEnteredVictoryZone.cs" />
     <Compile Include="Assets\Scripts\Mechanics\PatrolPath.cs" />
     <Compile Include="Assets\Scripts\Core\Simulation.InstanceRegister.cs" />
+    <Compile Include="Assets\Scripts\Mechanics\SampleCollectorForLevelF.cs" />
     <Compile Include="Assets\Scripts\Mechanics\SampleCollector.cs" />
     <Compile Include="Assets\Scripts\Gameplay\PlayerSpawn.cs" />
     <Compile Include="Assets\Scripts\UI\MainUIController.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="Assets\Mod Assets\Mod Resources\Scripts\Platformer\PlatformerJumpPad.cs" />
     <Compile Include="Assets\Scripts\Gameplay\PlayerDeath.cs" />
     <Compile Include="Assets\Scripts\Mechanics\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Mechanics\SampleF.cs" />
     <Compile Include="Assets\Mod Assets\Mod Resources\Scripts\Platformer\Jiggler.cs" />
     <Compile Include="Assets\Mod Assets\Mod Resources\Scripts\Platformer\SimpleTrigger.cs" />
     <Compile Include="Assets\Scripts\Mechanics\DeathZone.cs" />
