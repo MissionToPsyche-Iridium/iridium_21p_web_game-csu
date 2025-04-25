@@ -6,8 +6,11 @@ public class IntroManager : MonoBehaviour
 {
     private VideoPlayer videoPlayer;
 
+    // Commented drive link as it was giving cors issues
     // Google Drive shareable link converted to direct URL
-    public string videoURL = "https://drive.google.com/uc?export=download&id=1K2p3srYPJFows_q4XxMD1lHbnGeWXWga";
+    // public string videoURL = "https://drive.google.com/uc?export=download&id=1K2p3srYPJFows_q4XxMD1lHbnGeWXWga";
+    
+    public string videoURL = "https://missiontopsyche-iridium.github.io/iridium_21p_web_game-csu/Intro.mp4";
 
     void Start()
     {

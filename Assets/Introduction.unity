@@ -452,7 +452,7 @@ VideoPlayer:
   m_AudioOutputMode: 2
   m_TargetAudioSources: []
   m_DirectAudioVolumes: []
-  m_Url: https://drive.google.com/uc?export=download&id=1K2p3srYPJFows_q4XxMD1lHbnGeWXWga
+  m_Url: https://missiontopsyche-iridium.github.io/iridium_21p_web_game-csu/Intro.mp4
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01207dca9cdd5e54692d544accbf7e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoURL: https://drive.google.com/uc?export=download&id=1K2p3srYPJFows_q4XxMD1lHbnGeWXWga
+  videoURL: https://missiontopsyche-iridium.github.io/iridium_21p_web_game-csu/Intro.mp4
 --- !u!1 &1309727105
 GameObject:
   m_ObjectHideFlags: 0
